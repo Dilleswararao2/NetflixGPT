@@ -3,6 +3,19 @@
 
 -Creat react app
 -configured Tailwind CSS
+created components 
+Routing the app
+
+-Header 
+-login form
+-Form validation
+-useRef hook
+-firebase setup 
+-enabled Email authentication on firebase
+-deploying my app to production
+-create signup user account
+-implement sign in user api
+-created redux store with userSlice
 
 
 
