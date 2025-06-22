@@ -2,8 +2,7 @@ import axios from "axios";
 import { COHERE_API_KEY } from "./constants";
 
 export const getMovieSuggestions = async (inputText) => {
-  const prompt = `Suggest 5 movies for the query: "${inputText}". Respond with comma-separated movie names only.`;
-
+  const prompt = `Act as a Movie Recommendation system and suggest some movies for the query : "${inputText}". only give me names of 5 movies, comma seperated like the example result given ahead. Example Result: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya`;
   try {
     const res = await axios.post("http://localhost:8000/cohere", {
       model: "command",

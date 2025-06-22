@@ -25,4 +25,4 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "spanish", name: "Spanish" },
 ];
 
-export const COHERE_API_KEY = "z3zNtWWg6pcR4RdVh58mCZ1ikUhtRjCehSEZpWte";
+export const COHERE_API_KEY = process.env.REACT_APP_COHERE_API_KEY;

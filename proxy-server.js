@@ -14,7 +14,7 @@ app.use(express.json());
 app.post("/cohere", async (req, res) => {
   try {
     const cohereRes = await axios.post(
-      "https://api.cohere.ai/generate",
+      "https://api.cohere.ai/v1/generate",
       req.body,
       {
         headers: {
