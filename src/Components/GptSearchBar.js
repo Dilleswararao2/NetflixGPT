@@ -26,7 +26,7 @@ const GptSearchBar = () => {
     const prompt =
       "Act as a Movie Recommendation system and suggest some movies for the query : " +
       searchText.current.value +
-      ". only give me names of 5 movies, ',' seperated like the example result given ahead. (Example Result: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya). Dont give any other text";
+      ". only give me names of 5 movies, ',' seperated like the example result given ahead. (Example Result: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya). Dont give any other text and always follow the prompt";
 
     const gptResults = await axios.post("http://localhost:8000/cohere", {
       model: "command",
@@ -52,7 +52,7 @@ const GptSearchBar = () => {
     );
   };
   return (
-    <div className="pt-[35%] md:pt-[10%] flex justify-center">
+    <div className="pt-[60%] sm:pt-[50%] md:pt-[18%] flex justify-center">
       <form
         className="w-full md:w-1/2 bg-black grid grid-cols-12"
         onSubmit={(e) => e.preventDefault()}
