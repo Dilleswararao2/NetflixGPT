@@ -6,7 +6,7 @@ const app = express();
 const PORT = 8000;
 
 // Replace this with your actual Cohere API key
-const COHERE_API_KEY = "z3zNtWWg6pcR4RdVh58mCZ1ikUhtRjCehSEZpWte";
+const COHERE_API_KEY = process.env.REACT_APP_COHERE_API_KEY;
 
 app.use(cors());
 app.use(express.json());
