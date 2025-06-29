@@ -28,12 +28,15 @@ const GptSearchBar = () => {
       searchText.current.value +
       ".Just only give me names of 5 movies, ',' seperated like the example result given ahead. (Example Result: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya). Dont give any other text and suggestions and never ask user expirence and dont comment anything about movies that you are suggested";
 
-    const gptResults = await axios.post("http://localhost:8000/cohere", {
-      model: "command",
-      prompt,
-      max_tokens: 100,
-      temperature: 0.7,
-    });
+    const gptResults = await axios.post(
+      `${process.env.REACT_APP_BASE_URL}/cohere`,
+      {
+        model: "command",
+        prompt,
+        max_tokens: 100,
+        temperature: 0.7,
+      }
+    );
     if (!gptResults.choices) {
       // TODO: Write Error Handling
     }
