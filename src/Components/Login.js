@@ -67,7 +67,7 @@ const Login = () => {
       )
         .then((userCredential) => {
           // Signed in
-          const user = userCredential.user;
+          /* const user = userCredential.user; */
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -88,7 +88,7 @@ const Login = () => {
         <img
           className="h-screen w-screen object-cover"
           src={BG_URL}
-          alt="netflix background image"
+          alt="netflix background "
         />
       </div>
       <form
