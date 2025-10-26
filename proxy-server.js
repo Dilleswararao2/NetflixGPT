@@ -1,4 +1,4 @@
-const express = require("express");
+/*const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 
@@ -34,3 +34,4 @@ app.post("/cohere", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Proxy server running at http://localhost:${PORT}`);
 });
+*/

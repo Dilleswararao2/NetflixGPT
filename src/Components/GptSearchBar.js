@@ -31,8 +31,13 @@ const GptSearchBar = () => {
     const gptResults = await axios.post(
       `${process.env.REACT_APP_BASE_URL}/cohere`,
       {
-        model: "command",
-        prompt,
+        model: "command-a-03-2025",
+        messages: [
+          {
+            role: "user",
+            content: prompt,
+          },
+        ],
         max_tokens: 100,
         temperature: 0.7,
       }
@@ -41,7 +46,7 @@ const GptSearchBar = () => {
       // TODO: Write Error Handling
     }
 
-    const gptMovies = gptResults.data.generations?.[0]?.text.split(",");
+    const gptMovies = gptResults.data.message.content?.[0]?.text.split(",");
 
     const promiseArray = gptMovies.map((movie) => searchMovieTMDB(movie));
 
